@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Menu</name>
+    <events>
+        <include>mute</include>
+        <event-group description="" sid="383331178721782" title="localstorage">
+            <sub-events>
+                <event-block sid="873452754463235">
+                    <conditions>
+                        <condition id="10" name="On item missing" sid="230553072698636" type="LocalStorage">
+                            <param id="0" name="Key">&quot;R_ytuj&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set item" sid="886094321807124" type="LocalStorage">
+                            <param id="0" name="Key">&quot;R_ytuj&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="666093275978611">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="163238325189015" type="LocalStorage">
+                            <param id="0" name="Key">&quot;R_ytuj&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="885140756235300" type="LocalStorage">
+                            <param id="0" name="Key">&quot;R_ytuj&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="870935784322709">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="741389281742681" type="LocalStorage">
+                            <param id="0" name="Key">&quot;R_ytuj&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="916545686745008" type="System">
+                            <param id="0" name="Variable">record</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="859309253880418">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="204235947819591" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="675015076553123" type="Audio" />
+            </actions>
+            <sub-events>
+                <event-block sid="615334136290183">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="730099433349730" type="System">
+                            <param id="0" name="Variable">mute</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="793455384494234" type="LocalStorage">
+                            <param id="0" name="Key">&quot;R_ytuj&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="920027308806208" type="vol">
+                            <param id="0" name="Animation">&quot;on&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="519214838054958">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="811246960314012" type="System">
+                            <param id="0" name="Variable">mute</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="609157177335371" type="LocalStorage">
+                            <param id="0" name="Key">&quot;R_ytuj&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="225444821036856" type="vol">
+                            <param id="0" name="Animation">&quot;off&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>cerrar aplicacion</comment>
+        <event-block sid="959748835821350">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="146997359190715" type="Touch">
+                    <param id="0" name="Object">exit</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Close" sid="755697854413534" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block sid="686974756350305">
+            <conditions>
+                <condition id="17" name="On back button" sid="422772212500758" type="Browser" />
+            </conditions>
+            <actions>
+                <action id="1" name="Close" sid="725669033242268" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block sid="905329556838182">
+            <conditions>
+                <condition id="11" name="On menu button" sid="310153944610807" type="Browser" />
+            </conditions>
+            <actions>
+                <action id="1" name="Close" sid="450091510935765" type="Browser" />
+            </actions>
+        </event-block>
+        <comment>animacion logotipos</comment>
+        <event-block sid="318122109377755">
+            <conditions />
+            <actions>
+                <action id="-2" name="Set Y" sid="297002342265998" type="Sprite2">
+                    <param id="0" name="Y">lerp(Sprite2.Y, 220, 0.020)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="742323285906626">
+            <conditions />
+            <actions>
+                <action id="-1" name="Set X" sid="624487498354733" type="logoytuj">
+                    <param id="0" name="X">lerp(logoytuj.X, 64, 1)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="434666720061826">
+            <conditions />
+            <actions>
+                <action id="-1" name="Set X" sid="940561240402345" type="titulo">
+                    <param id="0" name="X">lerp(titulo.X, 256, 1)</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>boton play juego</comment>
+        <event-block sid="318039516972989">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="187988217976578" type="System">
+                    <param id="0" name="Variable">mute</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="545824177821585">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="194619165074735" type="Touch">
+                            <param id="0" name="Object">Sprite2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="33" name="Stop all" sid="808041972976306" type="Audio" />
+                        <action id="9" name="Set scale" sid="960133273292438" type="Sprite2">
+                            <param id="0" name="Scale">0.2</param>
+                        </action>
+                        <action id="0" name="Play" sid="509385944700242" type="Audio">
+                            <param id="0" name="Audio file">play_menu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">5</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="359894944965440" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="112904252719834" type="System">
+                            <param id="0" name="Layout">&quot;layout 1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="617525935160769">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="235763988251459" type="Keyboard">
+                            <param id="0" name="Key">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="33" name="Stop all" sid="572954355765644" type="Audio" />
+                        <action id="0" name="Play" sid="953077305414755" type="Audio">
+                            <param id="0" name="Audio file">play_menu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">5</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="370410071533614" type="System">
+                            <param id="0" name="Layout">&quot;layout 1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="689284548532020">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="986377733052126" type="System">
+                    <param id="0" name="Variable">mute</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="720615163270087">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="101282825016263" type="Touch">
+                            <param id="0" name="Object">Sprite2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="722815544908564" type="Sprite2">
+                            <param id="0" name="Scale">0.2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="886131296743757" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="897568359537210" type="System">
+                            <param id="0" name="Layout">&quot;layout 1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="194674862024823">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="519101806902560" type="Keyboard">
+                            <param id="0" name="Key">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="412675700596581" type="System">
+                            <param id="0" name="Layout">&quot;layout 1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="782748538239556">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="562209447028539" type="System">
+                    <param id="0" name="Variable">mute</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="5" inverted="1" name="Is tag playing" sid="948320066792934" type="Audio">
+                    <param id="0" name="Tag">&quot;menu&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="964095246805718" type="Audio">
+                    <param id="0" name="Audio file">Nueva Intro</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-1</param>
+                    <param id="1" name="Tag (optional)">&quot;menu&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Creditos</comment>
+        <event-block sid="140145662412819">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="187126149696322" type="Touch">
+                    <param id="0" name="Object">Creditos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="866247932230573" type="System">
+                    <param id="0" name="Layout">&quot;Creditos&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

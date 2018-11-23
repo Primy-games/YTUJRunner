@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Creditos</name>
+    <events>
+        <event-block sid="550619869669019">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="678881228725688" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="307807958943374">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="592471230616461" type="Touch">
+                    <param id="0" name="Object">retroceso</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="256157410265785" type="System">
+                    <param id="0" name="Layout">&quot;Menu&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="185859941301758">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="315384622602932" type="Touch">
+                    <param id="0" name="Object">logoytuj</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Go to URL" sid="953743701309073" type="Browser">
+                    <param id="0" name="URL">&quot;http://www.yoteniaunjuego.com/&quot;</param>
+                    <param id="1" name="Target">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="434853874254887">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="427302086520497" type="Touch">
+                    <param id="0" name="Object">BrankianZwei</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Go to URL" sid="263958614484570" type="Browser">
+                    <param id="0" name="URL">&quot;https://brankianzwei.bandcamp.com/&quot;</param>
+                    <param id="1" name="Target">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="256668453134232">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="854332120379394" type="Touch">
+                    <param id="0" name="Object">logoPrymigames</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Go to URL" sid="612784714130590" type="Browser">
+                    <param id="0" name="URL">&quot;http://www.yoteniaunjuego.com/&quot;</param>
+                    <param id="1" name="Target">2</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

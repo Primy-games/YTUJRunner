@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Ranking</name>
+    <events>
+        <include>mute</include>
+        <event-block sid="673260705879012">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="343092796085637" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="471473802471292" type="Audio">
+                    <param id="0" name="Tag">&quot;pajaro&quot;</param>
+                </action>
+                <action id="6" name="Stop" sid="998730416492615" type="Audio">
+                    <param id="0" name="Tag">&quot;rat&quot;</param>
+                </action>
+                <action id="6" name="Stop" sid="150858612814673" type="Audio">
+                    <param id="0" name="Tag">&quot;elicoptero&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="593233746500288">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="562774905792137" type="System">
+                    <param id="0" name="Variable">DistanciaTotal</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">record</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="298783390902184" type="System">
+                    <param id="0" name="Variable">record</param>
+                    <param id="1" name="Value">DistanciaTotal</param>
+                </action>
+                <action id="0" name="Set item" sid="940015596253489" type="LocalStorage">
+                    <param id="0" name="Key">&quot;R_ytuj&quot;</param>
+                    <param id="1" name="Value">record</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="567694990354241">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="723768660437980" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="976980354657638" type="Tex_Metros">
+                    <param id="0" name="Text">&quot;Meters: &quot; &amp; round(DistanciaTotal / 100)</param>
+                </action>
+                <action id="0" name="Set text" sid="276211990953672" type="Tex_Record">
+                    <param id="0" name="Text">&quot;record: &quot; &amp; round(record / 100)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="432513656663790">
+            <conditions>
+                <condition id="3" name="On touched object" sid="297956594075377" type="Touch">
+                    <param id="0" name="Object">retroceso</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="707835217902387" type="System">
+                    <param id="0" name="Variable">record</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="789584582588209" type="System">
+                    <param id="0" name="Variable">Distancia</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="212525522045829" type="System">
+                    <param id="0" name="Variable">DistanciaTotal</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="954334551833328" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

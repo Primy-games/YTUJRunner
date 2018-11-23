@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>mute</name>
+    <events>
+        <variable constant="0" name="mute" sid="654023776194041" static="0" type="number">0</variable>
+        <event-block sid="353119048745071">
+            <conditions>
+                <condition id="17" name="On tap object" sid="578902255329387" type="Touch">
+                    <param id="0" name="Object">vol</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="435781955811011" type="System">
+                    <param id="0" name="Variable">mute</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="579778483366914">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="849654134064703" type="System">
+                            <param id="0" name="Variable">mute</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="542144821156218" type="vol">
+                            <param id="0" name="Animation">&quot;off&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="999148930986761">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="899308840132764" type="System">
+                            <param id="0" name="Variable">mute</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="423588426771753" type="vol">
+                            <param id="0" name="Animation">&quot;on&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="173494229398041">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="868078153510981" type="System">
+                    <param id="0" name="Variable">mute</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="372426691503527" type="System">
+                    <param id="0" name="Variable">mute</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="799249990737026" type="vol">
+                    <param id="0" name="Animation">&quot;on&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="123905166609760">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="172962588684307" type="System">
+                    <param id="0" name="Variable">mute</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="180507433891717" type="Audio" />
+            </actions>
+        </event-block>
+        <event-block sid="636356730493875">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="906031360086793" type="System">
+                    <param id="0" name="Variable">mute</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="34" name="Schedule next play" sid="731187560123603" type="Audio">
+                    <param id="0" name="Time">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
